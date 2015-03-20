@@ -309,6 +309,12 @@ typedef NS_ENUM(NSInteger, SWRevealToggleAnimationType)
 // Delegate
 @property (nonatomic,weak) id<SWRevealViewControllerDelegate> delegate;
 
+// An overlay view that is laid on top of the frontview when rearview is displayed.
+// It prevents the front view from accepting any touched when it is pushed to the side.
+
+@property (strong, nonatomic) UIView *frontOverlayView;
+@property (assign, nonatomic) BOOL shouldUseFrontViewOverlay;
+
 @end
 
 
